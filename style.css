@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4b0082, #8a2be2);
+}
+
+/* Player Card */
+.player {
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Album Cover */
+.cover {
+    width: 180px;
+    height: 180px;
+    background: #2c2f8a;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate 6s linear infinite;
+}
+
+.music-icon {
+    font-size: 50px;
+    color: white;
+}
+
+/* Song Details */
+.details h2 {
+    margin-top: 15px;
+    color: #2c2f8a;
+}
+
+.details p {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+/* Progress Bar */
+.progress {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.time {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.bar {
+    flex: 1;
+    height: 6px;
+    background: #ddd;
+    margin: 0 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    width: 40%;
+    height: 100%;
+    background: #4b0082;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.controls button {
+    border: none;
+    background: #ddd;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #4b0082;
+    color: white;
+    transform: scale(1.1);
+}
+
+.play {
+    background: #4b0082;
+    color: white;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .player {
+        width: 90%;
+    }
+}
